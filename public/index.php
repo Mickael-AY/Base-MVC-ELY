@@ -4,6 +4,9 @@ require_once __DIR__ . '/../vendor/autoload.php'; // Chargement automatique des 
 // Importation des classes avec namespaces pour éviter les conflits de noms
 use Core\Router;
 
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__.":/..");
+$dotenv->safeLoad();
+
 // Initialisation du routeur
 $router = new Router();
 
